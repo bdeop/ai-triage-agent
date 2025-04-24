@@ -45,7 +45,7 @@ Place the following files from Synthea into the `data/` directory:
 - `conditions.csv`
 - `observations.csv`
 
-You can download them from https://synthea.mitre.org/downloads
+You can download them from https://synthea.mitre.org/downloads 
 Download this dataset: https://synthetichealth.github.io/synthea-sample-data/downloads/latest/synthea_sample_data_csv_latest.zip
 ---
 
