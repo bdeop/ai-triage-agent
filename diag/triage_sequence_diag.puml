@@ -1,0 +1,28 @@
+@startuml
+actor User
+participant "Streamlit UI" as UI
+participant "LangGraph Engine" as Graph
+participant "SymptomCollector" as Symptom
+participant "Clarifier" as Clarify
+participant "TriageClassifier" as Classify
+participant "DispositionPlanner" as Disposition
+
+User -> UI : Input Patient ID
+UI -> Graph : invoke({ patient: case })
+
+Graph -> Symptom : run(state["patient"])
+Symptom -> Graph : return { symptom_description }
+
+Graph -> Clarify : run(state)
+Clarify -> Graph : return { clarification_notes }
+
+Graph -> Classify : run(state)
+Classify -> Graph : return { triage_reasoning }
+
+Graph -> Disposition : run(state)
+Disposition -> Graph : return { care_recommendation }
+
+Graph --> UI : result dict (final state)
+UI -> User : Display summary, vitals, and timeline
+
+@enduml

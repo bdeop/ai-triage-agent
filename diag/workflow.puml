@@ -1,0 +1,15 @@
+@startuml
+title Agentic Workflow – AI Triage Agent
+
+start
+:Input Patient ID;
+
+:Load Patient Data (from CSVs);
+
+:SymptomCollector\n→ Generates patient complaint;
+:Clarifier\n→ Adds follow-up dialogue;
+:TriageClassifier\n→ Applies reasoning to assign urgency;
+:DispositionPlanner\n→ Recommends next clinical step;
+
+stop
+@enduml
