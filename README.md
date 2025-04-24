@@ -19,7 +19,8 @@ This project simulates a hospital triage process using an AI agent powered by GP
 ```
 ai_triage_agent/
 ├── data/                   # Place patients.csv and conditions.csv from Synthea
-├── agents/                 # Modular agents (symptom, triage, disposition)
+├── diag/                   # Diagrams (Flow and sequence) in platuml format
+├── agents/                 # Modular agents (symptom, clarifier, triage, disposition)
 ├── utils.py                # Data loading utilities
 ├── orchestrator.py         # LangGraph agent workflow
 ├── app.py                  # Streamlit app entry point
@@ -42,9 +43,12 @@ cd ai_triage_agent
 Place the following files from Synthea into the `data/` directory:
 - `patients.csv`
 - `conditions.csv`
+- `observations.csv`
 
-You can generate them from https://github.com/synthetichealth/synthea
+You can download them from https://synthea.mitre.org/downloads
 
+Download this dataset:
+https://synthetichealth.github.io/synthea-sample-data/downloads/latest/synthea_sample_data_csv_latest.zip
 ---
 
 ### Step 3: Create Virtual Environment and Install Requirements
@@ -93,14 +97,6 @@ Expected Output:
 - Symptom: "I feel chest tightness and shortness of breath."
 - Triage: EMERGENCY
 - Recommendation: Refer to ER immediately.
-
----
-
-## Future Enhancements
-
-- Add vitals and lab data from Synthea
-- Multi-turn dialogue triage refinement
-- Patient history timeline visualization
 
 ---
 
