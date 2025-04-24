@@ -76,7 +76,7 @@ OPENAI_API_KEY=sk-xxxxxxxxxx
 ### Step 5: Run the Streamlit App
 
 ```bash
-streamlit run app.py
+./venv/bin/python -m streamlit run app.py
 ```
 
 Enter a valid patient ID from the dataset to simulate a triage process.
@@ -85,7 +85,9 @@ Enter a valid patient ID from the dataset to simulate a triage process.
 
 ## Example Use
 
-Patient ID: `e5de52ab-cb32-4e82-a9e2-ff38d6548479`
+Patient ID: `6ce0bda7-716f-c904-cdc8-39076db16016`
+
+You can find all patient IDs in data/patients.csv file.
 
 Expected Output:
 - Symptom: "I feel chest tightness and shortness of breath."
