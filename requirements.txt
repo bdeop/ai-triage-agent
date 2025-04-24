@@ -1,8 +1,8 @@
 langchain
 langgraph
 langchain-openai
-langchain_community
 openai
 pandas
 streamlit
 python-dotenv
+plotly
